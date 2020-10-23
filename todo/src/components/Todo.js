@@ -10,13 +10,15 @@ const Todo = (props) => {
         <div className="task-input">
             <form id="task-form" onSubmit={props.onSubmit}>
                 <input className={props.tasks.error ? 'error' : ''} placeholder="Enter your task" type="text"/>
+                {props.tasks.error ? <small className="error-msg">Invalid task text (min 3)</small> : ''}
             </form>
         </div>
         <div className="tasks-list">
-            {props.tasks.tasks.length ? props.tasks.tasks.map(task => <Task onDelete={props.onDelete}
-                                                                            onClick={props.onClick}
-                                                                            key={task.id}
-                                                                            task={task}/>) : 'There is no any task yet.'}
+            {props.tasks.tasks.length ? props.tasks.tasks.sort((a, b) => b.id - a.id).map(task => <Task
+                onDelete={props.onDelete}
+                onClick={props.onClick}
+                key={task.id}
+                task={task}/>) : 'There is no any task yet.'}
         </div>
     </div>
 }

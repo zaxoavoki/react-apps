@@ -16,5 +16,11 @@
       color: red;
       border-color: red;
     }
+
+    & .error-msg {
+      display: block;
+      color: red;
+      margin-bottom: 15px;
+    }
   }
 }
