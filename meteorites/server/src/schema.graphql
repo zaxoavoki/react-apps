@@ -1,0 +1,13 @@
+type Meteorite {
+  id: ID!
+  name: String!
+  date: String!
+  fall: String!
+  mass: String!
+  latitude: String!
+  longitude: String!
+}
+
+type Query {
+  meteorites: [Meteorite!]!
+}

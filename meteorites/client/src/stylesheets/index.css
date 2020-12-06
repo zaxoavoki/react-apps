@@ -1,0 +1,11 @@
+body {
+  font-family: sans-serif;
+  padding: 2em;
+}
+
+.code-main {
+  display: block;
+  white-space: pre;
+  margin: auto;
+  width: 1530px;
+}

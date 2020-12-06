@@ -1,0 +1,5 @@
+extends:
+  - vazco/typescript
+
+rules:
+  react/prop-types: 0

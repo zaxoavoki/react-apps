@@ -1,0 +1,51 @@
+.App {
+  text-align: center;
+}
+
+.disabled-sort {
+  cursor: not-allowed;
+}
+
+th:not(.disabled-sort) {
+  cursor: pointer;
+}
+
+.page-link {
+  cursor: pointer;
+}
+
+.bg-selected {
+  background: #d2f9fc;
+}
+
+.bg-lightgreen {
+  background: #d2fcdf;
+}
+
+.bg-pink {
+  background: #fcd8d2;
+}
+
+.td-date {
+  width: 120px;
+}
+
+.td-name {
+  width: 200px;
+}
+
+.td-mass {
+  width: 150px;
+}
+
+.td-fell {
+  width: 100px;
+}
+
+.td-location {
+  width: 250px;
+}
+
+.td-important {
+  width: 100px;
+}
