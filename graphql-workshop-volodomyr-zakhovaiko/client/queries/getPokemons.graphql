@@ -1,0 +1,17 @@
+query getPokemons($limit: Int, $offset: Int) {
+  pokemons(limit: $limit, offset: $offset) {
+    count
+    results {
+      name
+      id
+      weight
+      height
+      sprite
+      types
+      abilities {
+        ability
+        is_hidden
+      }
+    }
+  }
+}

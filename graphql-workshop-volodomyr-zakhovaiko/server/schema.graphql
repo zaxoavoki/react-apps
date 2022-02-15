@@ -1,0 +1,58 @@
+type PokemonStats {
+  base_stat: Int
+  effort: Int
+  name: String
+}
+
+type PokemonAbility {
+  is_hidden: Boolean
+  ability: String
+}
+
+type Type {
+  name: String
+  url: String
+}
+
+type Pokemon {
+  id: ID!
+  name: String!
+  url: String
+  sprite: String
+  friends: [Pokemon!]
+  base_experience: Int
+  height: Int
+  weight: Int
+  types: [String]
+  is_default: Boolean
+  order: Int
+  effect_entries: [String]
+  abilities: [PokemonAbility!]
+  stats: [PokemonStats!]
+}
+
+interface Response {
+  count: Int
+  next: String
+  previos: String
+}
+
+type TypesResponse implements Response {
+  count: Int
+  next: String
+  previos: String
+  results: [Type!]
+}
+
+type PokemonsResponse implements Response {
+  count: Int
+  next: String
+  previos: String
+  results: [Pokemon!]
+}
+
+type Query {
+  pokemon(id: ID!): Pokemon
+  pokemons(limit: Int, offset: Int): PokemonsResponse!
+  types: TypesResponse!
+}
